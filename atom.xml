@@ -1,16 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[~/martijn]]></title>
   <link href="http://martijnvandijk.github.io/atom.xml" rel="self"/>
   <link href="http://martijnvandijk.github.io/"/>
-  <updated>2014-05-13T11:52:05+02:00</updated>
+  <updated>2014-05-13T12:04:29+02:00</updated>
   <id>http://martijnvandijk.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Martijn van Dijk]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Pass 1.6 on Fedora]]></title>
+    <link href="http://martijnvandijk.github.io/blog/2014/05/13/pass-1-dot-6-on-fedora/"/>
+    <updated>2014-05-13T11:56:43+02:00</updated>
+    <id>http://martijnvandijk.github.io/blog/2014/05/13/pass-1-dot-6-on-fedora</id>
+    <content type="html"><![CDATA[<p>Recently I was looking for a better password manager. I used to use <a href="http://keepass.info">KeePass</a>, but since I switched to linux as primary OS it has been at least to say annoying using KeePass. KeePass 2 has very nice Firefox integration using the <a href="http://keefox.org/">KeeFox plugin</a>. Unfortunately, KeePass is a .Net application, and even with mono, I could not get it to work. Even opening my database failed since password entering seems to be broken.</p>
+
+<p>Then, I found <a href="http://www.zx2c4.com/projects/password-store/">pass</a>. It lives in my shell and has a nice Firefox <a href="https://github.com/jvenant/passff#readme">plugin</a>. Installation was a breeze:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo yum install pass</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It worked, but I missed search functionality. Searching was introduced in version 1.6.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ pass --version
+</span><span class='line'>|-----------------------|
+</span><span class='line'>|   Password Store      |
+</span><span class='line'>|         v.1.4         |
+</span><span class='line'>|       by zx2c4        |
+</span><span class='line'>|                       |
+</span><span class='line'>|    Jason@zx2c4.com    |
+</span><span class='line'>|  Jason A. Donenfeld   |
+</span><span class='line'>|-----------------------|
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It turns out that I am running an older version. Pass 1.6 requires version 1.7 of tree. That version is unavailable from the Fedora 20 repos, but it is available in rawhide. Switching to rawhide on a workstation is generally a bad idea, so I grabbed the rpm from the rawhide repos:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ wget http://mirror.1000mbps.com/fedora/linux/development/rawhide/x86_64/os/Packages/t/tree-1.7.0-1.fc21.x86_64.rpm
+</span><span class='line'>$ sudo yum localinstall tree-1.7.0-1.fc21.x86_64.rpm -y</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then, grab pass version 1.6.1 from zx2c4&rsquo;s website and install it:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ wget http://git.zx2c4.com/password-store/snapshot/password-store-1.6.1.tar.xz
+</span><span class='line'>$ tar xf password-store-1.6.1.tar.xz
+</span><span class='line'>$ cd password-store-1.6.1
+</span><span class='line'>$ sudo make install</span></code></pre></td></tr></table></div></figure>
+
+
+<p>There you have it: the latest version of pass on Fedora 20</p>
+]]></content>
+  </entry>
   
 </feed>
