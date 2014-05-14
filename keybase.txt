@@ -1,0 +1,82 @@
+==================================================================
+https://keybase.io/martijnvandijk
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://martijnvandijk.net
+  * I am martijnvandijk (https://keybase.io/martijnvandijk) on keybase.
+  * I have a public key with fingerprint ACEE 36A6 3B9F 4A47 4CE4  3CB8 4516 5BC7 C291 186F
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.3.2"
+        },
+        "key": {
+            "fingerprint": "acee36a63b9f4a474ce43cb845165bc7c291186f",
+            "host": "keybase.io",
+            "key_id": "45165BC7C291186F",
+            "uid": "09105d629f9a7a424071112ef22cc400",
+            "username": "martijnvandijk"
+        },
+        "merkle_root": {
+            "ctime": 1400104928,
+            "hash": "69b646904d2e11ba8bfd6810dd99730a0e9d8b0d9429456262f5c473274be3a03fe7796ccb13f2618fcf5e3bd37096ae254fd582e82cbcda1cba7d0a5a4813af",
+            "seqno": 8235
+        },
+        "service": {
+            "hostname": "martijnvandijk.net",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1400105069,
+    "expire_in": 157680000,
+    "prev": "3e574b4d0e435f211ce3d71d5f1d418614cb8d873393617abcbfed85fad92e6d",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owFtUmtQVVUUvhdBkCTujKAISHASaQrvnH3e51ITjyGCoSFBmYyR23nsAwcu51zO
+vVxeg0xaNIoE+UNqLDQaUaBEHiETakUPCC0TfwDVRKQWGiUMMQQN0jlEU860f+29
+1/d9a31rrYaAdSYvc/LmnMGB10JU8+XbvCnLNVVUifCqWI7YKhHBIUPFbdwUrggi
+NqQQlvOcC1plNVJRRWgtcEWuYWIRD9RcsqroKNSKWzGkKtaAG2RJVvKg5tRkQwvh
+BAhxiqNwnpUIjqAJARK4wDMECSiSF2gBYwFgKEmXzFdd7vuyIquadlnUf1fxiUl0
+0t/4p/RYyWoAZQFKihTGSixHcwRGoDQAAIMShgkCgaIG0AW1NUtFnOaWCxQPp4hy
+QaFRdRHUCh3QrqnqqnXBLRtAoDMBSrAYo9fFufJ1KsXyFEGxKCFiEACeY3hJpBiA
+iiLL0jjKoZAVGR4VWQJjCZLCKEwiBYLGMZrgIc6huARpmqUEgQe4hFGAkQSJhDgv
+4jTKUhzESEISSQaDDCbwgsgBgedoEeVIjmAAzhkdcsFiRUVsDIaTVcZL88gCNKo2
+Wve/Dq0KNKbl1FS3KqgOPZ7vdjtthnH3+XKnQSiFvH1Nys7LOkvJ++98gQ69rykk
+SrGxCCxzyhq0ywaCpCkG1Y+RB3p0SRySumlCRPVZkxIGgABxkQYiKQGR0KcHCH0D
+RIbGcRanAM3xAi9BkSElTmQxSIn/WsX1Ork8XdIl5ymcu0SDSNUhr3Bvk9nLtN7H
+y1hgk/8Gyz9b3e0duPKMafvkudYbu+8c7rcdLwscWuhtmX8/eJRIT0HGY66ORg7W
+poXtWFwOyw5N6N042vXjH1fOti/BPr9pUwhKNw3xX4CLI9farMeazpxW95rP9034
+L7UMNpsDLNse39o6sfnD/srwuc5TZWN2x+T1toqe5u/NUXFiW9VPuP1E0cVfOiIm
+W/Y9qkVnPLfg7rG9M/d0Rt74lo7QS/uu//BSlCny0sq5et/2Mxd8Pou801qYFL2u
+KyFkr1dGwMTu4U+/bopsfCKVSZOSW4jm2Z/rmbyaciklY6bTWozAs79e+SA76iP/
+lz0PlNY0NcRkm+5ZFlXiMWAurc5t39NY735zeEe65Cx5uBHO/7b/0NjHVzcVZN2N
+1ooTH6n688Z8dmKaIzCnuOZklfZ2p33Y91nvC4vpFnPd9MDd9wbXy4G1nyRAV/XU
+4Z3M9uO1poONyxk3s5yxpxPw5KJbmwpGA+YejGiJfyO1wnStAY/zDeg60PeKzdM8
++rs1vL/nO6W77YWw3M74xriBJ8cTN2TeOxrjaJwZmV5e2jpqmf68KeYtx9EDEdmC
+mlIzUfLuV7MPPe/IzTno2w1nlm5OWb5JvdzhrKtW2oaJEfuxk627/ILHck8UB/mA
+uqFT39a8vnNb8cbmzNngWYujwrM/vr93y8pS15LrSP/srlsL6ZmvBgX53S54MXTP
+l8g0W9jk9Rc=
+=SHUx
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/martijnvandijk
+
+==================================================================
