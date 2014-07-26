@@ -4,7 +4,7 @@
   <title><![CDATA[/home/martijn]]></title>
   <link href="http://martijnvandijk.net/atom.xml" rel="self"/>
   <link href="http://martijnvandijk.net/"/>
-  <updated>2014-07-26T20:36:37+02:00</updated>
+  <updated>2014-07-26T20:37:17+02:00</updated>
   <id>http://martijnvandijk.net/</id>
   <author>
     <name><![CDATA[Martijn van Dijk]]></name>
@@ -12,15 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[My Wake-on-lan Utility: Pywake]]></title>
-    <link href="http://martijnvandijk.net/blog/2014/07/08/my-wake-on-lan-utility-pywake/"/>
-    <updated>2014-07-08T21:32:32+02:00</updated>
-    <id>http://martijnvandijk.net/blog/2014/07/08/my-wake-on-lan-utility-pywake</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Pass 1.6 on Fedora]]></title>
