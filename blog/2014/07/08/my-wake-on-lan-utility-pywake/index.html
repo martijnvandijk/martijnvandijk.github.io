@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Pass 1.6 on Fedora - /home/martijn</title>
+  <title>My Wake-on-lan Utility: Pywake - /home/martijn</title>
   <meta name="author" content="Martijn van Dijk">
 
   
-  <meta name="description" content="Recently I was looking for a better password manager. I used to use KeePass, but since I switched to linux as primary OS it has been at least to say &hellip;">
+  <meta name="description" content="
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://martijnvandijk.net/blog/2014/05/13/pass-1-dot-6-on-fedora">
+  <link rel="canonical" href="http://martijnvandijk.net/blog/2014/07/08/my-wake-on-lan-utility-pywake">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="/home/martijn" type="application/atom+xml">
@@ -68,7 +69,7 @@
   
   <header>
     
-      <h1 class="entry-title">Pass 1.6 on Fedora</h1>
+      <h1 class="entry-title">My Wake-on-lan Utility: Pywake</h1>
     
     
       <p class="meta">
@@ -84,65 +85,14 @@
   
 
 
-<time datetime="2014-05-13T11:56:43+02:00" pubdate data-updated="true">Tuesday 13 May 2014</time>
+<time datetime="2014-07-08T21:32:32+02:00" pubdate data-updated="true">Tuesday 08 July 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Recently I was looking for a better password manager. I used to use <a href="http://keepass.info">KeePass</a>, but since I switched to linux as primary OS it has been at least to say annoying using KeePass. KeePass 2 has very nice Firefox integration using the <a href="http://keefox.org/">KeeFox plugin</a>. Unfortunately, KeePass is a .Net application, and even with mono, I could not get it to work. Even opening my database failed since password entering seems to be broken.</p>
-
-<p>Then, I found <a href="http://www.zx2c4.com/projects/password-store/">pass</a>. It lives in my shell and has a nice Firefox <a href="https://github.com/jvenant/passff#readme">plugin</a>. Installation was a breeze:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo yum install pass</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It worked, but I missed search functionality. Searching was introduced in version 1.6.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ pass --version
-</span><span class='line'>|-----------------------|
-</span><span class='line'>|   Password Store      |
-</span><span class='line'>|         v.1.4         |
-</span><span class='line'>|       by zx2c4        |
-</span><span class='line'>|                       |
-</span><span class='line'>|    Jason@zx2c4.com    |
-</span><span class='line'>|  Jason A. Donenfeld   |
-</span><span class='line'>|-----------------------|
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It turns out that I am running an older version. Pass 1.6 requires version 1.7 of tree. That version is unavailable from the Fedora 20 repos, but it is available in rawhide. Switching to rawhide on a workstation is generally a bad idea, so I grabbed the rpm from the rawhide repos:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ wget http://mirror.1000mbps.com/fedora/linux/development/rawhide/x86_64/os/Packages/t/tree-1.7.0-1.fc21.x86_64.rpm
-</span><span class='line'>$ sudo yum localinstall tree-1.7.0-1.fc21.x86_64.rpm -y</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Then, grab pass version 1.6.1 from zx2c4&rsquo;s website and install it:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ wget http://git.zx2c4.com/password-store/snapshot/password-store-1.6.1.tar.xz
-</span><span class='line'>$ tar xf password-store-1.6.1.tar.xz
-</span><span class='line'>$ cd password-store-1.6.1
-</span><span class='line'>$ sudo make install</span></code></pre></td></tr></table></div></figure>
-
-
-<p>There you have it: the latest version of pass on Fedora 20</p>
+<div class="entry-content">
 </div>
 
 
@@ -165,7 +115,7 @@
   
 
 
-<time datetime="2014-05-13T11:56:43+02:00" pubdate data-updated="true">Tuesday 13 May 2014</time>
+<time datetime="2014-07-08T21:32:32+02:00" pubdate data-updated="true">Tuesday 08 July 2014</time>
       
 
 
@@ -173,7 +123,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://martijnvandijk.net/blog/2014/05/13/pass-1-dot-6-on-fedora/" data-via="martijn_vdijk" data-counturl="http://martijnvandijk.net/blog/2014/05/13/pass-1-dot-6-on-fedora/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://martijnvandijk.net/blog/2014/07/08/my-wake-on-lan-utility-pywake/" data-via="martijn_vdijk" data-counturl="http://martijnvandijk.net/blog/2014/07/08/my-wake-on-lan-utility-pywake/" >Tweet</a>
   
   
   
@@ -182,8 +132,8 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2014/05/13/pass-1-dot-6-on-fedora/" title="Previous Post: Pass 1.6 on Fedora">&laquo; Pass 1.6 on Fedora</a>
       
-        <a class="basic-alignment right" href="/blog/2014/07/08/my-wake-on-lan-utility-pywake/" title="Next Post: My wake-on-lan utility: pywake">My wake-on-lan utility: pywake &raquo;</a>
       
     </p>
   </footer>
@@ -266,8 +216,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://martijnvandijk.net/blog/2014/05/13/pass-1-dot-6-on-fedora/';
-        var disqus_url = 'http://martijnvandijk.net/blog/2014/05/13/pass-1-dot-6-on-fedora/';
+        var disqus_identifier = 'http://martijnvandijk.net/blog/2014/07/08/my-wake-on-lan-utility-pywake/';
+        var disqus_url = 'http://martijnvandijk.net/blog/2014/07/08/my-wake-on-lan-utility-pywake/';
         var disqus_script = 'embed.js';
       
     (function () {
