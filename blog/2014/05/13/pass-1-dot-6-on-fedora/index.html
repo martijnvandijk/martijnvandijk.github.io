@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>/home/martijn</title>
+  <title>Pass 1.6 on Fedora - /home/martijn</title>
   <meta name="author" content="Martijn van Dijk">
 
   
-  <meta name="description" content="A few days ago my new laptop came in the mail: a ThinkPad E540. Mine is configured with a core i7, 16 GB ram, 16 GB SSD cache, a 1 TB HDD and a matte &hellip;">
+  <meta name="description" content="Recently I was looking for a better password manager. I used to use KeePass, but since I switched to linux as primary OS it has been at least to say &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://martijnvandijk.github.io">
+  <link rel="canonical" href="http://martijnvandijk.github.io/blog/2014/05/13/pass-1-dot-6-on-fedora">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="/home/martijn" type="application/atom+xml">
@@ -63,73 +63,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/07/26/new-arrivals/">New Arrivals</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-07-26T21:36:51+02:00" pubdate data-updated="true">Saturday 26 July 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>A few days ago my new laptop came in the mail: a ThinkPad E540. Mine is configured with a core i7, 16 GB ram, 16 GB SSD cache, a 1 TB HDD and a matte full HD screen.
-It was a custom order via the lenovo webshop, so it took about three weeks to build and ship it.</p>
-
-<h1>First impressions</h1>
-
-<p>My first impressions were very good. When I took it out of the box, it felt very solid. The case, is as expected from a ThinkPad, very rigid and doesn&rsquo;t bend or twist. The keyboard feels solid.
-It has decent key travel and the room between the keys is just perfect for me. The comfort of the keyboard is very important for me since I used to have some RSI symptons in my wrists.
-On my desk I type with a <a href="http://www.microsoft.com/hardware/en-us/p/natural-ergonomic-keyboard-4000">Microsoft 4000 keyboard</a>.
-That keyboard has provided some solace to my pains, swithing to <a href="http://www.kaufmann.no/roland/dvorak/">Programmer Dvorak</a> a few years later made my pains go away, even on laptop keyboards.</p>
-
-<h1>Linux</h1>
-
-<p>This laptop shipped with Windows 8 (yuk!). Since I use <a href="https://fedoraproject.org">Fedora Linux</a> as my primary OS one of the first thinks I did was installing it.
-The initial installation was a breeze, but then some problems sprung to my eye. Suspending to RAM didn&rsquo;t work.
-Although the power led started to fade, the fan kept spinning and the system was stuck in this limbo. A second problem arose when I wanted to use the wired network interface. After resuming
-from suspend all packets would drop.</p>
-
-<h1>Troubleshooting</h1>
-
-<p>The first issue turned out to be a bug that was introduced after a firmware update. A workaround is to disable USB 3 support in the firmware. Fortunately the two USB 3 ports still function as your
-regular old-fashioned USB 2 ports.</p>
-
-<p>I couldn&rsquo;t find much information on the second issue, so I tried unloading the kernel module driving the interface: <code>sudo modprobe -r r8169</code> before putting my laptop into suspend, and re-inserting it after resume: <code>sudo modprobe r8169</code>. That seemed to fix it, so I wrote a service to unload the module before suspend, and load it after suspend.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/05/13/pass-1-dot-6-on-fedora/">Pass 1.6 on Fedora</a></h1>
+      <h1 class="entry-title">Pass 1.6 on Fedora</h1>
     
     
       <p class="meta">
@@ -152,7 +91,7 @@ regular old-fashioned USB 2 ports.</p>
   </header>
 
 
-  <div class="entry-content"><p>Recently I was looking for a better password manager. I used to use <a href="http://keepass.info">KeePass</a>, but since I switched to linux as primary OS it has been at least to say annoying using KeePass. KeePass 2 has very nice Firefox integration using the <a href="http://keefox.org/">KeeFox plugin</a>. Unfortunately, KeePass is a .Net application, and even with mono, I could not get it to work. Even opening my database failed since password entering seems to be broken.</p>
+<div class="entry-content"><p>Recently I was looking for a better password manager. I used to use <a href="http://keepass.info">KeePass</a>, but since I switched to linux as primary OS it has been at least to say annoying using KeePass. KeePass 2 has very nice Firefox integration using the <a href="http://keefox.org/">KeeFox plugin</a>. Unfortunately, KeePass is a .Net application, and even with mono, I could not get it to work. Even opening my database failed since password entering seems to be broken.</p>
 
 <p>Then, I found <a href="http://www.zx2c4.com/projects/password-store/">pass</a>. It lives in my shell and has a nice Firefox <a href="https://github.com/jvenant/passff#readme">plugin</a>. Installation was a breeze:</p>
 
@@ -205,18 +144,59 @@ regular old-fashioned USB 2 ports.</p>
 
 <p>There you have it: the latest version of pass on Fedora 20</p>
 </div>
+
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Martijn van Dijk</span></span>
+
+      
+
+
+
+
+
+
+
+
   
 
 
-    </article>
+<time datetime="2014-05-13T11:56:43+02:00" pubdate data-updated="true">Tuesday 13 May 2014</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
   
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://martijnvandijk.github.io/blog/2014/05/13/pass-1-dot-6-on-fedora/" data-via="martijn_vdijk" data-counturl="http://martijnvandijk.github.io/blog/2014/05/13/pass-1-dot-6-on-fedora/" >Tweet</a>
+  
+  
+  
 </div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/07/26/new-arrivals/" title="Next Post: New Arrivals">New Arrivals &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -237,7 +217,7 @@ regular old-fashioned USB 2 ports.</p>
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/martijnvandijk">@martijnvandijk</a> on GitHub
@@ -270,6 +250,7 @@ regular old-fashioned USB 2 ports.</p>
   
 </aside>
 
+
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -284,7 +265,10 @@ regular old-fashioned USB 2 ports.</p>
       var disqus_shortname = 'martijnvandijk';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://martijnvandijk.github.io/blog/2014/05/13/pass-1-dot-6-on-fedora/';
+        var disqus_url = 'http://martijnvandijk.github.io/blog/2014/05/13/pass-1-dot-6-on-fedora/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

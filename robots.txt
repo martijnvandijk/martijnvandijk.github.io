@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://martijnvandijk.github.io/sitemap.xml 

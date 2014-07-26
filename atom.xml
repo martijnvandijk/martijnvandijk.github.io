@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[/home/martijn]]></title>
+  <link href="http://martijnvandijk.github.io/atom.xml" rel="self"/>
+  <link href="http://martijnvandijk.github.io/"/>
+  <updated>2014-07-26T21:38:01+02:00</updated>
+  <id>http://martijnvandijk.github.io/</id>
+  <author>
+    <name><![CDATA[Martijn van Dijk]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[New Arrivals]]></title>
+    <link href="http://martijnvandijk.github.io/blog/2014/07/26/new-arrivals/"/>
+    <updated>2014-07-26T21:36:51+02:00</updated>
+    <id>http://martijnvandijk.github.io/blog/2014/07/26/new-arrivals</id>
+    <content type="html"><![CDATA[<p>A few days ago my new laptop came in the mail: a ThinkPad E540. Mine is configured with a core i7, 16 GB ram, 16 GB SSD cache, a 1 TB HDD and a matte full HD screen.
+It was a custom order via the lenovo webshop, so it took about three weeks to build and ship it.</p>
+
+<h1>First impressions</h1>
+
+<p>My first impressions were very good. When I took it out of the box, it felt very solid. The case, is as expected from a ThinkPad, very rigid and doesn&rsquo;t bend or twist. The keyboard feels solid.
+It has decent key travel and the room between the keys is just perfect for me. The comfort of the keyboard is very important for me since I used to have some RSI symptons in my wrists.
+On my desk I type with a <a href="http://www.microsoft.com/hardware/en-us/p/natural-ergonomic-keyboard-4000">Microsoft 4000 keyboard</a>.
+That keyboard has provided some solace to my pains, swithing to <a href="http://www.kaufmann.no/roland/dvorak/">Programmer Dvorak</a> a few years later made my pains go away, even on laptop keyboards.</p>
+
+<h1>Linux</h1>
+
+<p>This laptop shipped with Windows 8 (yuk!). Since I use <a href="https://fedoraproject.org">Fedora Linux</a> as my primary OS one of the first thinks I did was installing it.
+The initial installation was a breeze, but then some problems sprung to my eye. Suspending to RAM didn&rsquo;t work.
+Although the power led started to fade, the fan kept spinning and the system was stuck in this limbo. A second problem arose when I wanted to use the wired network interface. After resuming
+from suspend all packets would drop.</p>
+
+<h1>Troubleshooting</h1>
+
+<p>The first issue turned out to be a bug that was introduced after a firmware update. A workaround is to disable USB 3 support in the firmware. Fortunately the two USB 3 ports still function as your
+regular old-fashioned USB 2 ports.</p>
+
+<p>I couldn&rsquo;t find much information on the second issue, so I tried unloading the kernel module driving the interface: <code>sudo modprobe -r r8169</code> before putting my laptop into suspend, and re-inserting it after resume: <code>sudo modprobe r8169</code>. That seemed to fix it, so I wrote a service to unload the module before suspend, and load it after suspend.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Pass 1.6 on Fedora]]></title>
+    <link href="http://martijnvandijk.github.io/blog/2014/05/13/pass-1-dot-6-on-fedora/"/>
+    <updated>2014-05-13T11:56:43+02:00</updated>
+    <id>http://martijnvandijk.github.io/blog/2014/05/13/pass-1-dot-6-on-fedora</id>
+    <content type="html"><![CDATA[<p>Recently I was looking for a better password manager. I used to use <a href="http://keepass.info">KeePass</a>, but since I switched to linux as primary OS it has been at least to say annoying using KeePass. KeePass 2 has very nice Firefox integration using the <a href="http://keefox.org/">KeeFox plugin</a>. Unfortunately, KeePass is a .Net application, and even with mono, I could not get it to work. Even opening my database failed since password entering seems to be broken.</p>
+
+<p>Then, I found <a href="http://www.zx2c4.com/projects/password-store/">pass</a>. It lives in my shell and has a nice Firefox <a href="https://github.com/jvenant/passff#readme">plugin</a>. Installation was a breeze:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo yum install pass</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It worked, but I missed search functionality. Searching was introduced in version 1.6.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ pass --version
+</span><span class='line'>|-----------------------|
+</span><span class='line'>|   Password Store      |
+</span><span class='line'>|         v.1.4         |
+</span><span class='line'>|       by zx2c4        |
+</span><span class='line'>|                       |
+</span><span class='line'>|    Jason@zx2c4.com    |
+</span><span class='line'>|  Jason A. Donenfeld   |
+</span><span class='line'>|-----------------------|
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It turns out that I am running an older version. Pass 1.6 requires version 1.7 of tree. That version is unavailable from the Fedora 20 repos, but it is available in rawhide. Switching to rawhide on a workstation is generally a bad idea, so I grabbed the rpm from the rawhide repos:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ wget http://mirror.1000mbps.com/fedora/linux/development/rawhide/x86_64/os/Packages/t/tree-1.7.0-1.fc21.x86_64.rpm
+</span><span class='line'>$ sudo yum localinstall tree-1.7.0-1.fc21.x86_64.rpm -y</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then, grab pass version 1.6.1 from zx2c4&rsquo;s website and install it:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ wget http://git.zx2c4.com/password-store/snapshot/password-store-1.6.1.tar.xz
+</span><span class='line'>$ tar xf password-store-1.6.1.tar.xz
+</span><span class='line'>$ cd password-store-1.6.1
+</span><span class='line'>$ sudo make install</span></code></pre></td></tr></table></div></figure>
+
+
+<p>There you have it: the latest version of pass on Fedora 20</p>
+]]></content>
+  </entry>
+  
+</feed>
