@@ -1,23 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://martijnvandijk.github.io/blog/2014/05/13/pass-1-dot-6-on-fedora/</loc>
+        <loc>http://martijnvandijk.net/blog/2014/05/13/pass-1-dot-6-on-fedora/</loc>
         <lastmod>2014-07-26T21:30:06+02:00</lastmod>
     </url>
     <url>
-        <loc>http://martijnvandijk.github.io/blog/2014/07/26/new-arrivals/</loc>
+        <loc>http://martijnvandijk.net/blog/2014/07/26/new-arrivals/</loc>
         <lastmod>2014-07-26T21:37:11+02:00</lastmod>
     </url>
     <url>
-        <loc>http://martijnvandijk.github.io/robots.txt</loc>
+        <loc>http://martijnvandijk.net/robots.txt</loc>
         <lastmod>2014-07-26T21:30:06+02:00</lastmod>
     </url>
     <url>
-        <loc>http://martijnvandijk.github.io/</loc>
+        <loc>http://martijnvandijk.net/</loc>
         <lastmod>2014-07-26T21:37:11+02:00</lastmod>
     </url>
     <url>
-        <loc>http://martijnvandijk.github.io/blog/archives/</loc>
+        <loc>http://martijnvandijk.net/blog/archives/</loc>
         <lastmod>2014-07-26T21:37:11+02:00</lastmod>
     </url>
 </urlset>

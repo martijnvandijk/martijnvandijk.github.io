@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[/home/martijn]]></title>
-  <link href="http://martijnvandijk.github.io/atom.xml" rel="self"/>
-  <link href="http://martijnvandijk.github.io/"/>
-  <updated>2014-07-26T21:38:01+02:00</updated>
-  <id>http://martijnvandijk.github.io/</id>
+  <link href="http://martijnvandijk.net/atom.xml" rel="self"/>
+  <link href="http://martijnvandijk.net/"/>
+  <updated>2014-07-26T21:46:37+02:00</updated>
+  <id>http://martijnvandijk.net/</id>
   <author>
     <name><![CDATA[Martijn van Dijk]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[New Arrivals]]></title>
-    <link href="http://martijnvandijk.github.io/blog/2014/07/26/new-arrivals/"/>
+    <link href="http://martijnvandijk.net/blog/2014/07/26/new-arrivals/"/>
     <updated>2014-07-26T21:36:51+02:00</updated>
-    <id>http://martijnvandijk.github.io/blog/2014/07/26/new-arrivals</id>
+    <id>http://martijnvandijk.net/blog/2014/07/26/new-arrivals</id>
     <content type="html"><![CDATA[<p>A few days ago my new laptop came in the mail: a ThinkPad E540. Mine is configured with a core i7, 16 GB ram, 16 GB SSD cache, a 1 TB HDD and a matte full HD screen.
 It was a custom order via the lenovo webshop, so it took about three weeks to build and ship it.</p>
 
@@ -46,9 +46,9 @@ regular old-fashioned USB 2 ports.</p>
   
   <entry>
     <title type="html"><![CDATA[Pass 1.6 on Fedora]]></title>
-    <link href="http://martijnvandijk.github.io/blog/2014/05/13/pass-1-dot-6-on-fedora/"/>
+    <link href="http://martijnvandijk.net/blog/2014/05/13/pass-1-dot-6-on-fedora/"/>
     <updated>2014-05-13T11:56:43+02:00</updated>
-    <id>http://martijnvandijk.github.io/blog/2014/05/13/pass-1-dot-6-on-fedora</id>
+    <id>http://martijnvandijk.net/blog/2014/05/13/pass-1-dot-6-on-fedora</id>
     <content type="html"><![CDATA[<p>Recently I was looking for a better password manager. I used to use <a href="http://keepass.info">KeePass</a>, but since I switched to linux as primary OS it has been at least to say annoying using KeePass. KeePass 2 has very nice Firefox integration using the <a href="http://keefox.org/">KeeFox plugin</a>. Unfortunately, KeePass is a .Net application, and even with mono, I could not get it to work. Even opening my database failed since password entering seems to be broken.</p>
 
 <p>Then, I found <a href="http://www.zx2c4.com/projects/password-store/">pass</a>. It lives in my shell and has a nice Firefox <a href="https://github.com/jvenant/passff#readme">plugin</a>. Installation was a breeze:</p>
