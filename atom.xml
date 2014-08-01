@@ -4,7 +4,7 @@
   <title><![CDATA[/home/martijn]]></title>
   <link href="http://martijnvandijk.net/atom.xml" rel="self"/>
   <link href="http://martijnvandijk.net/"/>
-  <updated>2014-07-26T21:47:53+02:00</updated>
+  <updated>2014-08-01T19:57:52+02:00</updated>
   <id>http://martijnvandijk.net/</id>
   <author>
     <name><![CDATA[Martijn van Dijk]]></name>
@@ -12,6 +12,42 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Introducing PyWake]]></title>
+    <link href="http://martijnvandijk.net/blog/2014/08/01/introducing-pywake/"/>
+    <updated>2014-08-01T19:53:45+02:00</updated>
+    <id>http://martijnvandijk.net/blog/2014/08/01/introducing-pywake</id>
+    <content type="html"><![CDATA[<p>Recently I wrote a python script to take care of my wake-on-lan needs. It reads a json formatted config file:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="nt">&quot;hostname&quot;</span> <span class="p">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nt">&quot;mac&quot;</span> <span class="p">:</span> <span class="s2">&quot;xx:xx:xx:xx:xx:xx&quot;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nt">&quot;ip&quot;</span> <span class="p">:</span> <span class="s2">&quot;10.0.0.101&quot;</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="nt">&quot;hostname&quot;</span> <span class="p">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nt">&quot;mac&quot;</span> <span class="p">:</span> <span class="s2">&quot;xx:xx:xx:xx:xx:xx&quot;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nt">&quot;ip&quot;</span> <span class="p">:</span> <span class="s2">&quot;10.0.0.102&quot;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The config file resides in <code>~/.wakefile.json</code>. This makes it possible to include it in your dotfiles for easy updating.</p>
+
+<p>PyWake sends the wol packet using the <a href="https://pypi.python.org/pypi/awake">awake</a> library to send the wol packet. After sending the wol packet PyWake pings the ip address specified in the json file until it gets a response.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[New Arrivals]]></title>

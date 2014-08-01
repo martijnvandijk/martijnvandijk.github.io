@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Projects | /home/martijn]]></title>
+  <link href="http://martijnvandijk.net/blog/categories/projects/atom.xml" rel="self"/>
+  <link href="http://martijnvandijk.net/"/>
+  <updated>2014-08-01T19:57:52+02:00</updated>
+  <id>http://martijnvandijk.net/</id>
+  <author>
+    <name><![CDATA[Martijn van Dijk]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Introducing PyWake]]></title>
+    <link href="http://martijnvandijk.net/blog/2014/08/01/introducing-pywake/"/>
+    <updated>2014-08-01T19:53:45+02:00</updated>
+    <id>http://martijnvandijk.net/blog/2014/08/01/introducing-pywake</id>
+    <content type="html"><![CDATA[<p>Recently I wrote a python script to take care of my wake-on-lan needs. It reads a json formatted config file:</p>
+
+<p>``` json
+{</p>
+
+<pre><code>"hostname" : {
+    "mac" : "xx:xx:xx:xx:xx:xx",
+    "ip" : "10.0.0.101"
+},
+"hostname" : {
+    "mac" : "xx:xx:xx:xx:xx:xx",
+    "ip" : "10.0.0.102"
+}   
+</code></pre>
+
+<p>}
+```</p>
+
+<p>The config file resides in <code>~/.wakefile.json</code>. This makes it possible to include it in your dotfiles for easy updating.</p>
+
+<p>PyWake sends the wol packet using the <a href="https://pypi.python.org/pypi/awake">awake</a> library to send the wol packet. After sending the wol packet PyWake pings the ip address specified in the json file until it gets a response.</p>
+]]></content>
+  </entry>
+  
+</feed>

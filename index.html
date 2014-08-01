@@ -9,7 +9,17 @@
   <meta name="author" content="Martijn van Dijk">
 
   
-  <meta name="description" content="A few days ago my new laptop came in the mail: a ThinkPad E540. Mine is configured with a core i7, 16 GB ram, 16 GB SSD cache, a 1 TB HDD and a matte &hellip;">
+  <meta name="description" content="Recently I wrote a python script to take care of my wake-on-lan needs. It reads a json formatted config file: 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+{ &quot;hostname& &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +75,69 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/08/01/introducing-pywake/">Introducing PyWake</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-01T19:53:45+02:00" pubdate data-updated="true">Friday 01 August 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Recently I wrote a python script to take care of my wake-on-lan needs. It reads a json formatted config file:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="nt">&quot;hostname&quot;</span> <span class="p">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nt">&quot;mac&quot;</span> <span class="p">:</span> <span class="s2">&quot;xx:xx:xx:xx:xx:xx&quot;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nt">&quot;ip&quot;</span> <span class="p">:</span> <span class="s2">&quot;10.0.0.101&quot;</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="nt">&quot;hostname&quot;</span> <span class="p">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nt">&quot;mac&quot;</span> <span class="p">:</span> <span class="s2">&quot;xx:xx:xx:xx:xx:xx&quot;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nt">&quot;ip&quot;</span> <span class="p">:</span> <span class="s2">&quot;10.0.0.102&quot;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The config file resides in <code>~/.wakefile.json</code>. This makes it possible to include it in your dotfiles for easy updating.</p>
+
+<p>PyWake sends the wol packet using the <a href="https://pypi.python.org/pypi/awake">awake</a> library to send the wol packet. After sending the wol packet PyWake pings the ip address specified in the json file until it gets a response.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -222,6 +295,10 @@ regular old-fashioned USB 2 ports.</p>
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/08/01/introducing-pywake/">Introducing PyWake</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/07/26/new-arrivals/">New Arrivals</a>
